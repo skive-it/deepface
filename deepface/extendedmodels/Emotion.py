@@ -15,7 +15,7 @@ elif tf_version == 2:
 	from tensorflow.keras.models import Model, Sequential
 	from tensorflow.keras.layers import Conv2D, MaxPooling2D, AveragePooling2D, Flatten, Dense, Dropout
 	
-def loadModel():
+def loadModel(url = 'https://drive.google.com/uc?id=13iUHHP3SlNg53qSuQZDdHDSDNdBP9nwy'):
 	
 	num_classes = 7
 	
@@ -55,7 +55,6 @@ def loadModel():
 		#TO-DO: upload weights to google drive
 		
 		#zip
-		url = 'https://drive.google.com/uc?id=13iUHHP3SlNg53qSuQZDdHDSDNdBP9nwy'
 		output = home+'/.deepface/weights/facial_expression_model_weights.zip'
 		gdown.download(url, output, quiet=False)
 		
